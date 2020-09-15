@@ -1,0 +1,35 @@
+/* You can add global styles to this file, and also import other style files */
+table, footer {
+    margin: auto;
+    width: 100%;
+    text-align: center;
+    border-collapse:collapse;
+    font-size: 38px;
+    font-family: 'Lucida Console';
+}
+hr { 
+    height: 3px; 
+    background: green; 
+    border: 0px;
+} 
+th {
+    width: 14%;
+    color: green;
+}
+td {
+    width: 14.28%;
+    height: 50px;
+}
+tr {
+    height: 25%;
+}
+tr:nth-child(even) {
+    background: #CBE0CB;
+}
+.logo {
+    text-align: center;
+}
+tr.approved { 
+    background-color: green;
+    color: white;
+}

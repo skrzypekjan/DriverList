@@ -1,0 +1,35 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <div class="logo"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMQqWst3_3HotknBOORrovUCpIqQaYCMs9yg&usqp=CAU" alt="Zabka Polska"></div>
+    </div>
+    <div class="panel-body">
+      <hr>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>ID KIEROWCY</th>
+            <th>NUMER <br> REJESTRACYJNY</th>
+            <th>FIRMA</th>
+            <th>BRAMA</th>
+            <th>GODZINA</th>
+            <th>NR KOLEJKI</th>
+            <th>STATUS</th>
+          </tr>
+        </thead>
+      </table>
+      <hr>
+      <table >
+        <tbody>
+          <tr *ngFor="let driver of drivers | async" [ngStyle]="{'background-color': driver.status === 'GOTOWE DO WYDANIA' ? 'green' : 'none'}"> 
+            <td>{{driver.id}}</td>
+            <td>{{driver.carNumber}}</td>
+            <td>{{driver.company}}</td>
+            <td>{{driver.gatewayNumber}}</td>
+            <td>{{driver.time}}</td>
+            <td>{{driver.queueNumber}}</td>
+            <td>{{driver.status}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
